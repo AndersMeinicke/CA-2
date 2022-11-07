@@ -10,12 +10,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jokeFetcher" target="1.7" />
+      <module name="jokeFetcher" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="jokeFetcher" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
+      <module name="jokeFetcher" options="-endorseddirs C:\Users\olive\IdeaProjects\CA-2\target/endorsed" />
     </option>
   </component>
 </project>

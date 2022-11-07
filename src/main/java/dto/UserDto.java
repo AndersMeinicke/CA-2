@@ -1,15 +1,19 @@
 package dto;
 
+import Entities.User;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
  * A DTO for the {@link Entities.User} entity
  */
 public class UserDto implements Serializable {
-    private final Integer id;
+    private Integer id;
     @Size(max = 25)
     @NotNull
     private final String userName;
@@ -20,6 +24,24 @@ public class UserDto implements Serializable {
         this.id = id;
         this.userName = userName;
         this.userPass = userPass;
+    }
+
+    public UserDto(String userName, String userPass) {
+        this.userName = userName;
+        this.userPass = userPass;
+    }
+
+    public UserDto(User user) {
+        if(user.getId() != null)
+            this.id = user.getId();
+        this.userName = getUserName();
+        this.userPass = getUserPass();
+    }
+
+    public static List<UserDto> getDtos(List<User> users){
+        final List<UserDto> userDtos = new ArrayList();
+        users.forEach(user->userDtos.add(new UserDto(user)));
+        return userDtos;
     }
 
     public Integer getId() {

@@ -1,5 +1,7 @@
 package dto;
 
+import Entities.Role;
+
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Objects;
@@ -13,6 +15,10 @@ public class RoleDto implements Serializable {
 
     public RoleDto(String roleName) {
         this.roleName = roleName;
+    }
+
+    public RoleDto(Role role){
+        this.roleName = getRoleName();
     }
 
     public String getRoleName() {
