@@ -21,6 +21,11 @@ public class User {
     @Column(name = "user_pass")
     private String userPass;
 
+    public User(String userName, String userPass) {
+        this.userName = userName;
+        this.userPass = userPass;
+    }
+
     public Integer getId() {
         return id;
     }
