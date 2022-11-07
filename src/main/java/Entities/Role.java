@@ -12,15 +12,14 @@ public class Role {
     @Id
     @Size(max = 20)
     @Column(name = "role_name", nullable = false, length = 20)
-    private String id;
+    private String roleName;
 
-    public String getId() {
-        return id;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
-
     //TODO [JPA Buddy] generate columns from DB
 }
