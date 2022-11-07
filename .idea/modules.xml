@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../jokeFetcher.iml" filepath="$PROJECT_DIR$/../jokeFetcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokeFetcher.iml" filepath="$PROJECT_DIR$/jokeFetcher.iml" />
     </modules>
   </component>
 </project>
